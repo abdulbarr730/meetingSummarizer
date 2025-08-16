@@ -1,0 +1,156 @@
+/* --- 1. FONT IMPORT & SETUP --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+/* Define CSS Variables for easy theming */
+:root {
+  --bg-color: #1a202c;
+  --surface-color: #2d3748;
+  --primary-color-start: #805AD5; /* Purple */
+  --primary-color-end: #D53F8C;   /* Pink */
+  --text-primary: #e2e8f0;
+  --text-secondary: #a0aec0;
+  --border-color: #4a5568;
+  --border-focus-color: #9f7aea;
+}
+
+/* --- 2. BASE STYLES --- */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* --- 3. MAIN CONTAINER --- */
+.container {
+  background-color: var(--surface-color);
+  padding: 2rem 3rem;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border-color);
+  width: 100%;
+  max-width: 700px;
+  transition: all 0.3s ease;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+h2 {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.75rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+/* --- 4. FORMS & INPUTS --- */
+textarea,
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-primary);
+  background-color: var(--bg-color);
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="email"]:focus {
+  outline: none;
+  border-color: var(--border-focus-color);
+  box-shadow: 0 0 0 3px rgba(159, 122, 234, 0.2);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+/* --- 5. BUTTONS --- */
+button {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(45deg, var(--primary-color-start), var(--primary-color-end));
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
+}
+
+button:disabled {
+  background: var(--border-color);
+  cursor: not-allowed;
+  transform: translateY(0);
+  box-shadow: none;
+  opacity: 0.6;
+}
+
+/* --- 6. SHARING SECTION LAYOUT --- */
+.share-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.share-section input {
+  flex-grow: 1; /* Input takes up remaining space */
+  margin-top: 0;
+}
+
+.share-section button {
+  flex-shrink: 0; /* Prevent button from shrinking */
+  width: auto;    /* Let the button size to its content */
+  padding: 1rem 1.5rem;
+  margin-top: 0;
+}
+
+
+/* --- 7. STATUS MESSAGE --- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.status {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  animation: fadeIn 0.5s ease;
+}
