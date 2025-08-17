@@ -32,7 +32,7 @@ To get a local copy up and running, follow these detailed steps.
 
 1.  **Clone the Repository**
     ```bash
-    git clone [https://github.com/your-username/ai-meeting-summarizer.git](https://github.com/your-username/ai-meeting-summarizer.git)
+    git clone [https://github.com/your-username/meetingSummarizer.git](https://github.com/your-username/meetingSummarizer.git)
     cd ai-meeting-summarizer
     ```
 
