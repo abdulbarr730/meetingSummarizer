@@ -2,7 +2,7 @@
 
 This is a full-stack application that leverages AI to summarize meeting transcripts based on custom instructions. The generated summaries can be edited and shared directly via email.
 
-**Live Demo:** [Add your Vercel deployment link here]
+**Live Demo:** [(https://meeting-summarizer-black.vercel.app/)]
 
 ---
 
