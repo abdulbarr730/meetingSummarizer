@@ -27,7 +27,7 @@ export default async function handler(req, res) {
           content: `Instruction: "${customPrompt}"\n\nTranscript:\n---\n${transcript}`,
         },
       ],
-      model: 'llama3-8b-8192', // A fast and capable model
+      model: 'llama-3.1-8b-instant', // A fast and capable model
     });
 
     const summary = completion.choices[0]?.message?.content || '';
